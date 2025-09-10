@@ -1,5 +1,5 @@
 package model;
 
-public class Appliance {
-
+public abstract class Appliance {
+	
 }
