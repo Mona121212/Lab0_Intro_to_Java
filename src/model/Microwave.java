@@ -7,10 +7,10 @@ public class Microwave extends Appliance{
 	// char only use single character
 	private char roomType;
 	public Microwave(String itemNumber, String brand, int quantity, int wattage, String color, double price,
-			double capacity, char roomType) {
+			double capacity, String roomType2) {
 			super(itemNumber, brand, quantity, wattage, color, price);
 			this.capacity = capacity;
-			this.roomType = roomType;
+			this.roomType = roomType2.charAt(0);
 			
 		}
 	
