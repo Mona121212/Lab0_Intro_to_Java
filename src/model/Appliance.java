@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Appliance {
+public class Appliance {
 	private String itemNumber;    
     private String brand;         
     private int quantity;         
@@ -55,13 +55,14 @@ public abstract class Appliance {
     }
     
 
-    public void checkout() {
+    public void decreaseQuantity() {
         if (quantity > 0) {
             quantity--;
         }
     }
     
- 
+    
+    @Override
     public String toString() {
         return "ItemNumber: " + itemNumber + "\n" +
                "Brand: " + brand + "\n" +
@@ -70,5 +71,11 @@ public abstract class Appliance {
                "Color: " + color + "\n" +
                "Price: " + price;
     }
+    
+    public String formatForFile() {
+        return itemNumber + ";" + brand + ";" + quantity + ";" +
+               wattage + ";" + color + ";" + price;
+    }
+
 	
 }
